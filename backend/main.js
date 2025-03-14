@@ -1,24 +1,16 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
 const session = require("express-session");
-const MongoStore = require("connect-mongo"); // ✅ Import MongoStore
+const MongoStore = require("connect-mongo");
 
 const userRoutes = require("./routes/userRoutes");
 const quizRoutes = require("./routes/quizRoutes");
 const roundRoutes = require("./routes/roundRoutes");
-const LeaderboardRoutes = require("./routes/leaderboard"); // ✅ Import LeaderboardRoutes
+const LeaderboardRoutes = require("./routes/leaderboard");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
-// ✅ CORS Middleware (Ensures Cookies are sent)
-app.use(cors({
-  origin: "https://67d3b0cfb7cb4f076a79a00f--hilarious-lokum-960004.netlify.app",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true 
-}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -36,14 +28,14 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // ✅ Move session middleware ABOVE routes
 app.use(session({
-    secret: "your_secret_key", 
+    secret: "your_secret_key",
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }), // ✅ Store sessions in MongoDB
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
     cookie: {
         secure: false, // Set to `true` if using HTTPS
-        httpOnly: true, 
-        sameSite: "lax", 
+        httpOnly: true,
+        sameSite: "lax",
         maxAge: 24 * 60 * 60 * 1000 // 1-day expiration
     }
 }));
@@ -52,9 +44,8 @@ app.use(session({
 app.use("/users", userRoutes);
 app.use("/quiz", quizRoutes);
 app.use("/rounds", roundRoutes);
-app.use("/leaderboard", LeaderboardRoutes); // ✅ Leaderboard Route
-app.use("/progress", require("./routes/progress-tracker")); // ✅ Progress Route
-
+app.use("/leaderboard", LeaderboardRoutes);
+app.use("/progress", require("./routes/progress-tracker"));
 
 // ✅ Root Route
 app.get("/", (req, res) => {
