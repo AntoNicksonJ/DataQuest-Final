@@ -1,0 +1,40 @@
+.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .navbar1 img {
+    height: 50px;
+}
+
+.navbar .navbar1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 2vh 4vh;
+}
+
+.navbar #TeamLogout{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 8%;
+    gap: 5%;
+    width: 35%;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.navbar #Logout{
+    text-decoration: None;
+    color: red;
+}

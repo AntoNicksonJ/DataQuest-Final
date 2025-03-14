@@ -1,0 +1,66 @@
+.q {
+    background-image: url('../background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    aspect-ratio: None;
+    height: 100vh;
+}
+
+.q #grid{
+    display: grid;
+    grid-template-columns: 100% 40%;
+    grid-template-rows: 15vh auto;
+}
+
+.q #flex{
+    display: flex;
+    flex-direction: column;
+    grid-row-start: 2;
+    margin-left: 5%;
+    gap: 2vh;
+}
+
+
+.q #title{
+    color: white;
+    font-size: 35px;
+    font-family: "Poller One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.q #question, .q #submit{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    font-weight:300;
+    font-size: 18px;
+}
+
+.q #answer{
+    height: 10vh;
+    width: 30%;
+    background-color: transparent;
+    outline: none;
+    border:2px solid white;
+    border-radius: 15px;
+    color: white;
+    padding-left: 4%;
+    font-size: 20px;
+    
+}
+
+.q #submit{
+    width: 20%;
+    height: 5vh;
+    border-radius: 2vh;
+    background-color: transparent;
+    border: 2px solid white;
+   color: white;
+}
+
+.q form{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}

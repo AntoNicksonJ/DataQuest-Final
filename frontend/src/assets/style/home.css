@@ -1,0 +1,121 @@
+.home {
+    margin: 0;
+    padding: 0;
+    background-image: url('../Home1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    aspect-ratio: None;
+    height: 100vh;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+.home .navbar img {
+    height: 50px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.home .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 2vh 4vh;
+}
+
+.home .white{
+    color: white;
+}
+
+.home #title{
+    font-size: 50px;
+    font-family: "Rubik Burned", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.home #subTitle{
+    font-size: 35px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.home #grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 49vh 49vh;
+}
+
+.home #bottomLeft{
+    padding: 0 0 0 40px;
+    grid-area: 2/ 1;
+}
+
+.home #bottomRight{
+    padding: 0 20px 0 0;
+    grid-area: 2/2;
+}
+
+.home #flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+
+}
+
+.home .label{
+    width: 50%;
+    border-radius: 1.5vh;
+}
+
+.home legend{
+    color: white;
+    font-size: 20px;
+}
+
+.home .input{
+    border: None;
+    outline: None;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding-left: 10px;
+    color: white;
+}
+
+.home #login{
+    color: white;
+    font-size: 35px;
+    margin-bottom: 0px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0px;
+}
+
+.home #submit{
+    border: None;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: 1px solid white; 
+    padding: 10px 20px;
+    border-radius: 10px;
+}

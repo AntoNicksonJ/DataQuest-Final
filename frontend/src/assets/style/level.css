@@ -1,0 +1,97 @@
+.level {
+    margin: 0;
+    padding: 0;
+    background-image: url('../levelbg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    aspect-ratio: None;
+    height: 100vh;
+    position: relative;
+}
+
+.level .navbar img {
+    height: 50px;
+}
+
+.level .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 2vh 4vh;
+}
+
+.level #TeamLogout{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 8%;
+    gap: 5%;
+    width: 35%;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.level #Logout{
+    text-decoration: None;
+    color: red;
+}
+
+.level #title{
+    font-size: 70px;
+    font-family: "Rubik Burned", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.level #white{
+    color: rgb(255, 255, 255);
+}
+
+.level #flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    position: absolute;
+    width: 100%;
+    top: 30vh;
+}
+
+.level .rounds{
+    width: 60%;
+    height: 18vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 3vh;
+    padding: 10px;
+    color: white;
+    font-size: 45px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    top: 2vh;
+}
+
+.level .start{
+    padding: 0.8vh 4%;
+    border-radius: 0.7vh;
+    border: None;
+    color: white;
+    background-color: green;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
